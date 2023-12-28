@@ -1,6 +1,9 @@
 const bannersSwiper = new Swiper(".banners .swiper", {
   slidesPerView: 1,
-  spaceBetween: 12,
+  spaceBetween: 40,
+  autoplay: {
+    delay: 5000,
+  },
   pagination: {
     el: ".banners .swiper-pagination",
   },

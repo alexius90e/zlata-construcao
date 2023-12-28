@@ -1,17 +1,120 @@
 .banners {
+  padding: 40px 0 160px;
+  background-color: $white;
+
+  @include desktop {
+    padding: 40px 0 120px;
+  }
+
+  @include laptop {
+    padding: 0;
+  }
+
   &__slider {
+    position: relative;
+
+    @include laptop {
+      margin: 0 -20px;
+    }
+
+    & .swiper {
+      &-slide {
+        height: auto;
+      }
+
+      &-pagination {
+        bottom: -33px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        @include laptop {
+          bottom: 8px !important;
+        }
+
+        &-bullet {
+          height: 12px;
+          width: 12px;
+          margin: 0 !important;
+          background-color: $gray3;
+          opacity: 1;
+
+          &-active {
+            background-color: $prim;
+          }
+        }
+      }
+    }
   }
 
   &__slide {
+    position: relative;
+    min-height: 632px;
+    height: 100%;
+    padding: 132px 48px 48px;
+    box-sizing: border-box;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+
+    @include tablet {
+      min-height: auto;
+    }
+
+    @include mobile {
+      padding: 37px 20px;
+    }
+
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      padding: 0;
+      margin: 0;
+
+      & img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
     &-title {
+      max-width: 694px;
+      margin: 0 0 40px;
+
+      @include tablet {
+        min-height: auto;
+        font-size: 48px;
+        letter-spacing: 2.6px;
+      }
+
+      @include mobile {
+        margin: 0 0 16px;
+        font-size: 26px;
+      }
+
       &-mark {
       }
     }
 
     &-text {
+      max-width: 694px;
+      margin: 0 0 56px;
+
+      @include mobile {
+        margin: 0 0 24px;
+      }
     }
 
     &-buttons {
+      & .button {
+        padding: 16px;
+        font-size: 15px;
+      }
     }
   }
 }
