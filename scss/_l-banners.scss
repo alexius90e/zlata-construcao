@@ -85,6 +85,7 @@
     &-title {
       max-width: 694px;
       margin: 0 0 40px;
+      color: $white;
 
       @include tablet {
         min-height: auto;
@@ -98,12 +99,14 @@
       }
 
       &-mark {
+        color: $prim;
       }
     }
 
     &-text {
       max-width: 694px;
       margin: 0 0 56px;
+      color: $white;
 
       @include mobile {
         margin: 0 0 24px;

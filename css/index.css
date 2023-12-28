@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 html {
-  color: #E0E0E0;
+  color: #111111;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -57,6 +57,7 @@ ul {
   font-weight: 700;
   line-height: 140%;
   letter-spacing: 4px;
+  text-align: center;
   text-transform: uppercase;
 }
 @media (max-width: 576px) {
@@ -110,6 +111,25 @@ ul {
 }
 .button:active {
   background-color: #b08841;
+}
+
+.section {
+  padding: 124px 0;
+}
+@media (max-width: 992px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+}
+@media (max-width: 576px) {
+  .section {
+    padding: 32px 0;
+  }
 }
 
 .header {
@@ -357,6 +377,7 @@ ul {
 .banners__slide-title {
   max-width: 694px;
   margin: 0 0 40px;
+  color: #FFFFFF;
 }
 @media (max-width: 768px) {
   .banners__slide-title {
@@ -371,9 +392,13 @@ ul {
     font-size: 26px;
   }
 }
+.banners__slide-title-mark {
+  color: #9C742D;
+}
 .banners__slide-text {
   max-width: 694px;
   margin: 0 0 56px;
+  color: #FFFFFF;
 }
 @media (max-width: 576px) {
   .banners__slide-text {
@@ -385,9 +410,54 @@ ul {
   font-size: 15px;
 }
 
-.about {
-  padding: 120px 0;
+.about__advantages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 64px;
+  max-width: 1110px;
+  margin: 0 auto;
 }
+@media (max-width: 992px) {
+  .about__advantages {
+    gap: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .about__advantages {
+    justify-content: center;
+  }
+}
+.about__advantages-card {
+  flex: 1 1 40%;
+  max-width: 498px;
+}
+@media (max-width: 768px) {
+  .about__advantages-card {
+    flex: 1 1 100%;
+  }
+}
+.about__advantages-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 24px;
+  padding: 0;
+}
+.about__advantages-card-icon img {
+  display: block;
+  height: 56px;
+  width: auto;
+}
+.about__advantages-card-title {
+  margin: 0 0 16px;
+  text-align: center;
+}
+.about__advantages-card-text {
+  color: #333333;
+  text-align: center;
+}
+
 .portfolio__card-image {
   max-width: 100%;
   height: auto;
