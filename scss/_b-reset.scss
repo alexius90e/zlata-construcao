@@ -1,9 +1,9 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 html {
-  color: $body1;
+  color: $gray3;
   font-size: 1rem;
-  font-family: "PT Sans Caption", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
@@ -18,7 +18,7 @@ a,
 button,
 input,
 textarea {
-  font-family: "PT Sans Caption", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 a {
@@ -51,7 +51,7 @@ ul {
 
 .h2 {
   margin: 0 0 70px;
-  color: $body3;
+  color: $black;
   text-align: center;
   font-size: 70px;
   font-style: normal;
