@@ -15,6 +15,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  background-color: #FFFFFF;
 }
 
 a,
@@ -63,6 +64,7 @@ ul {
 @media (max-width: 576px) {
   .h2 {
     margin-bottom: 24px;
+    font-size: 26px;
   }
 }
 
@@ -350,7 +352,7 @@ ul {
 }
 @media (max-width: 768px) {
   .banners__slide {
-    min-height: auto;
+    min-height: 330px;
   }
 }
 @media (max-width: 576px) {
@@ -410,6 +412,9 @@ ul {
   font-size: 15px;
 }
 
+.about {
+  background-color: #FAFAFA;
+}
 .about__advantages {
   display: flex;
   justify-content: space-between;
