@@ -1,0 +1,30 @@
+.contacts {
+  & .container {
+  }
+
+  &__title {
+  }
+
+  &__contacts {
+    &-link {
+    }
+
+    &-map {
+    }
+
+    &-socal {
+      &-link {
+        &_facebook {
+        }
+
+        &_whatsapp {
+        }
+
+        &_insta {
+        }
+      }
+    }
+  }
+
+  
+}

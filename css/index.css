@@ -1,0 +1,120 @@
+html {
+  color: #153D53;
+  font-size: 1rem;
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 16px 0;
+}
+
+ul {
+  margin: 16px 0;
+  padding-left: 18px;
+}
+
+.text-16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media (max-width: 768px) {
+  .text-16 {
+    font-size: 14px;
+  }
+}
+
+.h2 {
+  margin: 0 0 70px;
+  color: #005B9F;
+  text-align: center;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .h2 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 576px) {
+  .h2 {
+    font-size: 32px;
+  }
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 28px;
+  color: #ffffff;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 1.7px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #9c742d;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  transition: all ease-in-out 0.15s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #886019;
+}
+.button:active {
+  background-color: #b08841;
+}
+
+.about {
+  padding: 120px 0;
+}
+.portfolio__card-image {
+  max-width: 100%;
+  height: auto;
+}
