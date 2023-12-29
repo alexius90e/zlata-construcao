@@ -411,7 +411,13 @@ ul {
   background-size: 30px;
 }
 .header__social-link_email {
+  display: none;
   background-image: url(../img/icons/mail-black.svg);
+}
+@media (max-width: 992px) {
+  .header__social-link_email {
+    display: inline-block;
+  }
 }
 .header__social-link_phone {
   display: none;

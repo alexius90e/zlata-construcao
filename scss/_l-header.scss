@@ -210,7 +210,12 @@
       background-size: 30px;
 
       &_email {
+        display: none;
         background-image: url(../img/icons/mail-black.svg);
+
+        @include laptop {
+          display: inline-block;
+        }
       }
 
       &_phone {
