@@ -1,30 +1,109 @@
 .contacts {
+  background-color: $background;
+
   & .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+
+    @include laptop {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &__content {
+    flex: 0 4 709px;
+
+    @include laptop {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__callback {
+    flex: 0 1 496px;
+
+    @include laptop {
+      flex: 0 1 auto;
+    }
   }
 
   &__title {
+    margin: 0 0 16px;
+    text-align: left;
   }
 
-  &__contacts {
+  &__description {
+    margin: 0 0 40px;
+
+    @include tablet {
+      margin: 0 0 32px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 32px;
+
+    @include tablet {
+      gap: 8px;
+      margin: 0 0 24px;
+    }
+
+    &-item {
+      color: $gray1;
+    }
+  }
+
+  &__map {
+    height: 440px;
+    margin: 0 0 32px;
+
+    @include tablet {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
     &-link {
-    }
+      display: block;
+      height: 28px;
+      width: 28px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
 
-    &-map {
-    }
+      &_facebook {
+        background-image: url(../img/icons/facebook-black.svg);
+      }
 
-    &-socal {
-      &-link {
-        &_facebook {
-        }
+      &_whatsapp {
+        background-image: url(../img/icons/whatsapp.svg);
+      }
 
-        &_whatsapp {
-        }
-
-        &_insta {
-        }
+      &_instagram {
+        background-image: url(../img/icons/instagram.svg);
       }
     }
   }
 
-  
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & .button {
+      width: max-content;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
 }

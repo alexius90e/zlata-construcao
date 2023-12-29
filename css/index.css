@@ -135,6 +135,66 @@ ul {
   }
 }
 
+.floating-input {
+  position: relative;
+}
+.floating-input input, .floating-input textarea {
+  display: block;
+  width: 100% !important;
+  padding: 11px 16px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all ease-in-out 0.15s;
+}
+.floating-input input:focus, .floating-input textarea:focus {
+  border-color: #9C742D;
+  outline: none;
+}
+.floating-input input:valid, .floating-input textarea:valid {
+  border-color: #9C742D;
+}
+.floating-input input::-ms-input-placeholder, .floating-input textarea::-ms-input-placeholder {
+  opacity: 0;
+}
+.floating-input input::placeholder, .floating-input textarea::placeholder {
+  opacity: 0;
+}
+.floating-input input:focus::-ms-input-placeholder, .floating-input input:valid::-ms-input-placeholder, .floating-input textarea:focus::-ms-input-placeholder, .floating-input textarea:valid::-ms-input-placeholder {
+  opacity: 1;
+}
+.floating-input input:focus::placeholder, .floating-input input:valid::placeholder, .floating-input textarea:focus::placeholder, .floating-input textarea:valid::placeholder {
+  opacity: 1;
+}
+.floating-input textarea {
+  min-height: 150px;
+  resize: none;
+}
+.floating-input label {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  display: block;
+  padding: 0 2px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  pointer-events: none;
+  background-color: #FAFAFA;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.floating-input input:focus ~ label, .floating-input input:valid ~ label, .floating-input textarea:focus ~ label, .floating-input textarea:valid ~ label {
+  color: #828282;
+  transform: scale(0.8) translateX(-10px) translateY(-30px);
+}
+
 .header {
   padding: 16px 0;
   background-color: #FFFFFF;
@@ -294,6 +354,13 @@ ul {
   background-size: 36px;
   border: none;
   cursor: pointer;
+}
+
+.footer {
+  padding: 24px 0;
+  background-color: #FFFFFF;
+  text-align: center;
+  border-top: 1px solid #E0E0E0;
 }
 
 .banners {
@@ -719,4 +786,107 @@ ul {
   color: #FFFFFF;
   border-color: #b08841;
   background-color: #b08841;
+}
+
+.contacts {
+  background-color: #FAFAFA;
+}
+.contacts .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+@media (max-width: 992px) {
+  .contacts .container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.contacts__content {
+  flex: 0 4 709px;
+}
+@media (max-width: 992px) {
+  .contacts__content {
+    flex: 0 1 auto;
+  }
+}
+.contacts__callback {
+  flex: 0 1 496px;
+}
+@media (max-width: 992px) {
+  .contacts__callback {
+    flex: 0 1 auto;
+  }
+}
+.contacts__title {
+  margin: 0 0 16px;
+  text-align: left;
+}
+.contacts__description {
+  margin: 0 0 40px;
+}
+@media (max-width: 768px) {
+  .contacts__description {
+    margin: 0 0 32px;
+  }
+}
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 0 32px;
+}
+@media (max-width: 768px) {
+  .contacts__info {
+    gap: 8px;
+    margin: 0 0 24px;
+  }
+}
+.contacts__info-item {
+  color: #333333;
+}
+.contacts__map {
+  height: 440px;
+  margin: 0 0 32px;
+}
+@media (max-width: 768px) {
+  .contacts__map {
+    margin: 0 0 24px;
+  }
+}
+.contacts__social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contacts__social-link {
+  display: block;
+  height: 28px;
+  width: 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.contacts__social-link_facebook {
+  background-image: url(../img/icons/facebook-black.svg);
+}
+.contacts__social-link_whatsapp {
+  background-image: url(../img/icons/whatsapp.svg);
+}
+.contacts__social-link_instagram {
+  background-image: url(../img/icons/instagram.svg);
+}
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contacts__form .button {
+  width: -moz-max-content;
+  width: max-content;
+}
+@media (max-width: 576px) {
+  .contacts__form .button {
+    width: 100%;
+  }
 }
