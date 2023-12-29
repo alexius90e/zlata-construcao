@@ -463,6 +463,140 @@ ul {
   text-align: center;
 }
 
+.services .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+}
+@media (max-width: 992px) {
+  .services .container {
+    gap: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .services .container {
+    gap: 0;
+  }
+}
+.services__title {
+  flex: 1 1 100%;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .services__title {
+    order: 1;
+    margin: 0 0 24px;
+  }
+}
+.services__list {
+  flex: 0 1 calc(50% - 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+@media (max-width: 992px) {
+  .services__list {
+    flex: 0 1 calc(50% - 16px);
+  }
+}
+@media (max-width: 768px) {
+  .services__list {
+    flex: 1 1 100%;
+    order: 2;
+    margin: 0 0 64px;
+  }
+}
+.services__list-item-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+.services__list-item-title-icon {
+  display: block;
+  max-width: 32px;
+  width: 100%;
+  height: auto;
+}
+.services__list-item-text {
+  margin: 16px 0 0;
+}
+@media (max-width: 768px) {
+  .services__list-item-text {
+    margin: 8px 0 0;
+  }
+}
+.services__image {
+  flex: 0 1 calc(50% - 32px);
+  background: url(../img/services/service-bg.jpg) bottom right;
+  background-size: 100%;
+}
+@media (max-width: 992px) {
+  .services__image {
+    flex: 0 1 calc(50% - 16px);
+    background-size: 540px;
+  }
+}
+@media (max-width: 768px) {
+  .services__image {
+    flex: 1 1 100%;
+    order: 0;
+    height: 600px;
+    margin: 0 -20px 40px;
+    background-position: bottom 30% right;
+    background-size: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .services__image {
+    height: 400px;
+    background-position: bottom 30% right;
+    background-size: 576;
+  }
+}
+.services__slider {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .services__slider {
+    order: 3;
+  }
+}
+.services__slide-figure {
+  height: 280px;
+  margin: 0 0 32px;
+  padding: 0;
+}
+@media (max-width: 576px) {
+  .services__slide-figure {
+    margin: 0 0 16px;
+  }
+}
+.services__slide-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.services__slide-title {
+  margin: 0;
+}
+@media (max-width: 576px) {
+  .services__slide-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 360px) {
+  .services__slide-title {
+    font-size: 20px;
+  }
+}
+
 .portfolio__card-image {
   max-width: 100%;
   height: auto;

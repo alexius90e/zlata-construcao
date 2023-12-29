@@ -10,20 +10,19 @@ const bannersSwiper = new Swiper(".banners .swiper", {
 });
 
 const servicesSwiper = new Swiper(".services .swiper", {
-  slidesPerView: 1,
-  spaceBetween: 1.2,
+  spaceBetween: 16,
+  slidesPerView: 1.13,
   breakpoints: {
     586: {
       slidesPerView: 1.5,
+      spaceBetween: 24,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 2.2,
+      spaceBetween: 30,
     },
     1200: {
       slidesPerView: 3,
     },
-  },
-  pagination: {
-    el: ".services .swiper-pagination",
   },
 });
