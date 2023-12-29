@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     gap: 56px;
     max-width: 1164px;
-    margin-bottom: 64px;
+    margin: 0 auto 64px;
 
     @include laptop {
       gap: 48px;

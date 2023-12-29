@@ -47,11 +47,11 @@
         </div>
 
         <div class="header__social">
+          <a class="header__social-link header__social-link_phone" href="tel:+351924980077"></a>
           <a
             class="header__social-link header__social-link_email"
             href="mailto:zlataconstrucao@gmail.com"
           ></a>
-          <a class="header__social-link header__social-link_phone" href="tel:+351924980077"></a>
           <a
             class="header__social-link header__social-link_facebook"
             href="https://www.facebook.com/"
@@ -373,7 +373,7 @@
           </div>
 
           <div class="why-cordages__buttons">
-            <button class="button">PEDIR ORÇAMENTO GRÀTIS</button>
+            <button class="button open-callback-button">PEDIR ORÇAMENTO GRÀTIS</button>
           </div>
         </div>
       </section>
@@ -469,22 +469,22 @@
 
             <form class="contacts__form">
               <div class="floating-input">
-                <input type="text" name="name" required />
+                <input type="text" name="name" placeholder="Nome" required />
                 <label>Nome</label>
               </div>
 
               <div class="floating-input">
-                <input type="email" name="email" required />
+                <input type="email" name="email" placeholder="Email" required />
                 <label>Email</label>
               </div>
 
               <div class="floating-input">
-                <input type="text" name="subject" required />
+                <input type="text" name="subject" placeholder="Assunto" />
                 <label>Assunto</label>
               </div>
 
               <div class="floating-input">
-                <textarea name="message" required></textarea>
+                <textarea name="message" placeholder="Mensagem" required></textarea>
                 <label>Mensagem</label>
               </div>
 
@@ -498,9 +498,12 @@
     <footer class="footer">
       <div class="container">
         <span>Copyright 2023 Ziata Construgao, Todos os direitos reservados</span>
-        <a class="footer__phone" href="tel:+351924980077">
-          <span class="footer__phone-text">Liga-nos</span>
-        </a>
+
+        <div class="footer__phone">
+          <a class="footer__phone-link" href="tel:+351924980077">
+            <span class="footer__phone-text">Liga-nos</span>
+          </a>
+        </div>
       </div>
     </footer>
 
@@ -510,17 +513,17 @@
 
         <form class="modal__form">
           <div class="floating-input">
-            <input type="text" name="name" required />
+            <input type="text" name="name" placeholder="Nome" required />
             <label>Nome</label>
           </div>
 
           <div class="floating-input">
-            <input type="email" name="email" required />
+            <input type="email" name="email" placeholder="Email" required />
             <label>Email</label>
           </div>
 
           <div class="floating-input">
-            <input type="tel" name="phone" required />
+            <input type="tel" name="phone" placeholder="Telefone" required />
             <label>Telefone</label>
           </div>
 

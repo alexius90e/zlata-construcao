@@ -20,17 +20,12 @@
       outline: none;
     }
 
-    &:valid {
+    &:not(:placeholder-shown) {
       border-color: $prim;
     }
 
     &::placeholder {
       opacity: 0;
-    }
-
-    &:focus::placeholder,
-    &:valid::placeholder {
-      opacity: 1;
     }
   }
 
@@ -58,9 +53,9 @@
   }
 
   & input:focus ~ label,
-  & input:valid ~ label,
+  & input:not(:placeholder-shown) ~ label,
   & textarea:focus ~ label,
-  & textarea:valid ~ label {
+  & textarea:not(:placeholder-shown) ~ label {
     color: $gray2;
     transform: scale(0.8) translateX(-10px) translateY(-30px);
   }

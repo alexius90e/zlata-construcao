@@ -156,7 +156,7 @@ ul {
   border-color: #9C742D;
   outline: none;
 }
-.floating-input input:valid, .floating-input textarea:valid {
+.floating-input input:not(:placeholder-shown), .floating-input textarea:not(:placeholder-shown) {
   border-color: #9C742D;
 }
 .floating-input input::-ms-input-placeholder, .floating-input textarea::-ms-input-placeholder {
@@ -164,12 +164,6 @@ ul {
 }
 .floating-input input::placeholder, .floating-input textarea::placeholder {
   opacity: 0;
-}
-.floating-input input:focus::-ms-input-placeholder, .floating-input input:valid::-ms-input-placeholder, .floating-input textarea:focus::-ms-input-placeholder, .floating-input textarea:valid::-ms-input-placeholder {
-  opacity: 1;
-}
-.floating-input input:focus::placeholder, .floating-input input:valid::placeholder, .floating-input textarea:focus::placeholder, .floating-input textarea:valid::placeholder {
-  opacity: 1;
 }
 .floating-input textarea {
   min-height: 150px;
@@ -192,7 +186,7 @@ ul {
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 }
-.floating-input input:focus ~ label, .floating-input input:valid ~ label, .floating-input textarea:focus ~ label, .floating-input textarea:valid ~ label {
+.floating-input input:focus ~ label, .floating-input input:not(:placeholder-shown) ~ label, .floating-input textarea:focus ~ label, .floating-input textarea:not(:placeholder-shown) ~ label {
   color: #828282;
   transform: scale(0.8) translateX(-10px) translateY(-30px);
 }
@@ -478,6 +472,41 @@ ul {
   position: fixed;
   right: 40px;
   bottom: 40px;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .footer__phone {
+    bottom: 40px;
+    right: 24px;
+  }
+}
+.footer__phone::before, .footer__phone::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #9C742D;
+  left: -5px;
+  right: -5px;
+  top: -5px;
+  bottom: -5px;
+  border-radius: 100px;
+  animation: pulse 1.8s linear infinite;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+.footer__phone-link {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -488,13 +517,7 @@ ul {
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
 }
-@media (max-width: 576px) {
-  .footer__phone {
-    bottom: 40px;
-    right: 24px;
-  }
-}
-.footer__phone::before {
+.footer__phone-link::before {
   content: "";
   display: block;
   height: 28px;
@@ -830,7 +853,7 @@ ul {
   flex-wrap: wrap;
   gap: 56px;
   max-width: 1164px;
-  margin-bottom: 64px;
+  margin: 0 auto 64px;
 }
 @media (max-width: 992px) {
   .why-cordages__cards {
