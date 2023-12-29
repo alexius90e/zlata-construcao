@@ -179,7 +179,8 @@ ul {
   position: absolute;
   top: 11px;
   left: 16px;
-  display: block;
+  display: flex;
+  gap: 4px;
   padding: 0 2px;
   font-size: 17px;
   font-style: normal;
@@ -194,6 +195,15 @@ ul {
 .floating-input input:focus ~ label, .floating-input input:valid ~ label, .floating-input textarea:focus ~ label, .floating-input textarea:valid ~ label {
   color: #828282;
   transform: scale(0.8) translateX(-10px) translateY(-30px);
+}
+.floating-input input:required ~ label::after, .floating-input textarea:required ~ label::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 6px;
+  background-color: red;
+  background: url(../img/icons/required.svg) center no-repeat;
+  background-size: 100%;
 }
 
 .header {
@@ -479,9 +489,8 @@ ul {
 }
 @media (max-width: 576px) {
   .footer__phone {
-    padding: 8px;
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 24px;
   }
 }
 .footer__phone::before {
@@ -491,12 +500,6 @@ ul {
   width: 28px;
   background: url(../img/icons/phone-brown.svg) center no-repeat;
   background-size: 100%;
-}
-@media (max-width: 576px) {
-  .footer__phone::before {
-    width: 24px;
-    height: 24px;
-  }
 }
 .footer__phone-text {
   color: #9C742D;

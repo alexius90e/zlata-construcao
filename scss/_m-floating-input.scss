@@ -43,7 +43,8 @@
     position: absolute;
     top: 11px;
     left: 16px;
-    display: block;
+    display: flex;
+    gap: 4px;
     padding: 0 2px;
     font-size: 17px;
     font-style: normal;
@@ -62,5 +63,18 @@
   & textarea:valid ~ label {
     color: $gray2;
     transform: scale(0.8) translateX(-10px) translateY(-30px);
+  }
+
+  & input:required ~ label,
+  & textarea:required ~ label {
+    &::after {
+      content: "";
+      display: block;
+      height: 6px;
+      width: 6px;
+      background-color: red;
+      background: url(../img/icons/required.svg) center no-repeat;
+      background-size: 100%;
+    }
   }
 }
