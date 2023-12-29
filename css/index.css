@@ -196,6 +196,9 @@ ul {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
   padding: 16px 0;
   background-color: #FFFFFF;
 }
@@ -252,7 +255,30 @@ ul {
 }
 @media (max-width: 768px) {
   .header__nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    width: 300px;
+    max-height: 100vh;
+    padding: 124px 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: white;
+    transition: transform ease-in-out 0.4s;
+    transform: translateX(-1000px);
+    will-change: transform;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav.active {
+    transform: translateX(0);
   }
 }
 .header__nav-link {
@@ -266,9 +292,65 @@ ul {
   border-bottom: 2px solid rgba(156, 116, 45, 0);
   transition: all ease-in-out 0.15s;
 }
+@media (max-width: 768px) {
+  .header__nav-link {
+    padding: 0;
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    border: none;
+  }
+}
 .header__nav-link:hover {
   color: #9C742D;
   border-color: #9c742d;
+}
+.header__nav-bottom {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 33px;
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__nav-bottom {
+    display: block;
+  }
+}
+.header__nav-bottom-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #333333;
+}
+.header__nav-bottom .button {
+  padding: 16px 10px;
+  font-size: 15px;
+}
+.header__nav .header__logo-link {
+  position: absolute;
+  top: 48px;
+  left: 20px;
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__nav .header__logo-link {
+    display: block;
+  }
+}
+.header__nav-close {
+  position: absolute;
+  top: 49px;
+  right: 20px;
+  display: none;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: url(../img/icons/close.svg) center no-repeat;
+  background-size: 100%;
+}
+@media (max-width: 768px) {
+  .header__nav-close {
+    display: block;
+  }
 }
 .header__contacts {
   display: flex;
@@ -354,6 +436,23 @@ ul {
   background-size: 36px;
   border: none;
   cursor: pointer;
+}
+.header__burger-button.active::before {
+  display: none;
+  transition: all ease-in-out 0.15s;
+}
+@media (max-width: 768px) {
+  .header__burger-button.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: block;
+    background-color: rgba(17, 17, 17, 0.6);
+  }
 }
 
 .footer {

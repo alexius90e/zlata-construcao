@@ -18,10 +18,20 @@
         </div>
 
         <nav class="header__nav">
-          <a href="#" class="header__nav-link">Sobre Nós</a>
-          <a href="#" class="header__nav-link"> Serviços</a>
-          <a href="#" class="header__nav-link">Portfólio</a>
-          <a href="#" class="header__nav-link">Contactos</a>
+          <a class="header__logo-link" href="#"></a>
+          <button class="header__nav-close"></button>
+
+          <a href="#about" class="header__nav-link">Sobre Nós</a>
+          <a href="#services" class="header__nav-link"> Serviços</a>
+          <a href="#portfolio" class="header__nav-link">Portfólio</a>
+          <a href="#contacts" class="header__nav-link">Contactos</a>
+
+          <div class="header__nav-bottom">
+            <a class="header__nav-bottom-link" href="mailto:zlataconstruçao@gmail.com">
+              zlataconstruçao@gmail.com
+            </a>
+            <button class="button">PEDIR ORÇAMENTO GRÀTIS</button>
+          </div>
         </nav>
 
         <div class="header__contacts">
@@ -98,7 +108,7 @@
         </div>
       </section>
 
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="container">
           <h2 class="about__title h2">SOBRE NÒS</h2>
 
@@ -150,7 +160,7 @@
         </div>
       </section>
 
-      <section class="services section">
+      <section class="services section" id="services">
         <div class="container">
           <h2 class="services__title h2">SERVIÇOS</h2>
           <ul class="services__list">
@@ -365,7 +375,7 @@
         </div>
       </section>
 
-      <section class="portfolio section">
+      <section class="portfolio section" id="portfolio">
         <div class="container">
           <h2 class="portfolio__title h2">PORTFÒLIO</h2>
 
@@ -398,7 +408,7 @@
         </div>
       </section>
 
-      <section class="contacts section">
+      <section class="contacts section" id="contacts">
         <div class="container">
           <div class="contacts__content">
             <h2 class="contacts__title h2">Contatos</h2>
@@ -483,9 +493,7 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
-        Copyright 2023 Ziata Construgao, Todos os direitos reservados
-      </div>
+      <div class="container">Copyright 2023 Ziata Construgao, Todos os direitos reservados</div>
     </footer>
   </body>
 </html>
