@@ -15,7 +15,8 @@
     z-index: 100;
     border: 2px solid $prim;
     border-radius: 64px;
-    background-color: rgba($color: $white, $alpha: 0.8);
+    background-color: rgba($color: $white, $alpha: 0.7);
+    backdrop-filter: blur(10px);
 
     @include mobile {
       bottom: 40px;
