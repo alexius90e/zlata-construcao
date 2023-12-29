@@ -65,6 +65,7 @@ ul {
   .h2 {
     margin-bottom: 24px;
     font-size: 26px;
+    letter-spacing: 2.6px;
   }
 }
 
@@ -407,9 +408,11 @@ ul {
     margin: 0 0 24px;
   }
 }
-.banners__slide-buttons .button {
-  padding: 16px;
-  font-size: 15px;
+@media (max-width: 576px) {
+  .banners__slide-buttons .button {
+    padding: 16px;
+    font-size: 15px;
+  }
 }
 
 .about {
@@ -594,6 +597,78 @@ ul {
 @media (max-width: 360px) {
   .services__slide-title {
     font-size: 20px;
+  }
+}
+
+.why-cordages {
+  background-color: #FAFAFA;
+}
+@media (max-width: 576px) {
+  .why-cordages__title {
+    margin: 0 0 32px;
+    text-align: left;
+  }
+}
+.why-cordages__cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 56px;
+  max-width: 1164px;
+  margin-bottom: 64px;
+}
+@media (max-width: 992px) {
+  .why-cordages__cards {
+    gap: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .why-cordages__cards {
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .why-cordages__cards {
+    gap: 24px;
+  }
+}
+.why-cordages__card {
+  flex: 1 1 40%;
+  max-width: 520px;
+}
+@media (max-width: 576px) {
+  .why-cordages__card {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
+.why-cordages__card-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 0 16px;
+}
+@media (max-width: 768px) {
+  .why-cordages__card-title {
+    margin: 0 0 8px;
+  }
+}
+.why-cordages__card-title-icon {
+  width: 32px;
+  height: auto;
+}
+.why-cordages__card-text {
+  margin: 0;
+}
+.why-cordages__buttons {
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .why-cordages__buttons .button {
+    width: 100%;
+    padding: 16px;
+    font-size: 15px;
   }
 }
 

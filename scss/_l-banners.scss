@@ -115,8 +115,10 @@
 
     &-buttons {
       & .button {
-        padding: 16px;
-        font-size: 15px;
+        @include mobile {
+          padding: 16px;
+          font-size: 15px;
+        }
       }
     }
   }

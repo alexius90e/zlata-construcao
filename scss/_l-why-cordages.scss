@@ -1,27 +1,74 @@
 .why-cordages {
-  & .container {
-  }
+  background-color: $background;
 
   &__title {
+    @include mobile {
+      margin: 0 0 32px;
+      text-align: left;
+    }
   }
 
   &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 56px;
+    max-width: 1164px;
+    margin-bottom: 64px;
+
+    @include laptop {
+      gap: 48px;
+    }
+
+    @include tablet {
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      gap: 24px;
+    }
   }
 
   &__card {
+    flex: 1 1 40%;
+    max-width: 520px;
+
+    @include mobile {
+      flex: 1 1 100%;
+      max-width: none;
+    }
 
     &-title {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 0 0 16px;
+
+      @include tablet {
+        margin: 0 0 8px;
+      }
 
       &-icon {
-
+        width: 32px;
+        height: auto;
       }
     }
 
     &-text {
+      margin: 0;
     }
   }
 
   &__buttons {
-    
+    text-align: center;
+
+    & .button {
+      @include mobile {
+        width: 100%;
+        padding: 16px;
+        font-size: 15px;
+      }
+    }
   }
 }
