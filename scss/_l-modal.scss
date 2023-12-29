@@ -17,10 +17,12 @@
   &__content {
     position: relative;
     max-width: 90vw;
+    max-height: 90vh;
     width: 500px;
     margin: 0 0 32px;
     padding: 64px 40px 56px;
     box-sizing: border-box;
+    overflow: auto;
     background-color: $white;
     transition: transform ease-in-out 0.4s;
     transform: translateY(-1000px);

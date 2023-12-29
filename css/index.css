@@ -118,6 +118,7 @@ ul {
 
 .section {
   padding: 124px 0;
+  background-color: #FFFFFF;
 }
 @media (max-width: 992px) {
   .section {
@@ -462,6 +463,48 @@ ul {
   background-color: #FFFFFF;
   text-align: center;
   border-top: 1px solid #E0E0E0;
+}
+.footer__phone {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px;
+  z-index: 100;
+  border: 2px solid #9C742D;
+  border-radius: 64px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 576px) {
+  .footer__phone {
+    padding: 8px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+.footer__phone::before {
+  content: "";
+  display: block;
+  height: 28px;
+  width: 28px;
+  background: url(../img/icons/phone-brown.svg) center no-repeat;
+  background-size: 100%;
+}
+@media (max-width: 576px) {
+  .footer__phone::before {
+    width: 24px;
+    height: 24px;
+  }
+}
+.footer__phone-text {
+  color: #9C742D;
+}
+@media (max-width: 768px) {
+  .footer__phone-text {
+    display: none;
+  }
 }
 
 .banners {
@@ -1010,10 +1053,12 @@ ul {
 .modal__content {
   position: relative;
   max-width: 90vw;
+  max-height: 90vh;
   width: 500px;
   margin: 0 0 32px;
   padding: 64px 40px 56px;
   box-sizing: border-box;
+  overflow: auto;
   background-color: #FFFFFF;
   transition: transform ease-in-out 0.4s;
   transform: translateY(-1000px);

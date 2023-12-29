@@ -1,5 +1,6 @@
 .section {
   padding: 124px 0;
+  background-color: $white;
 
   @include laptop {
     padding: 60px 0;

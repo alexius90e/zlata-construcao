@@ -3,4 +3,46 @@
   background-color: $white;
   text-align: center;
   border-top: 1px solid $gray3;
+
+  &__phone {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px;
+    z-index: 100;
+    border: 2px solid $prim;
+    border-radius: 64px;
+    background-color: rgba($color: $white, $alpha: 0.8);
+
+    @include mobile {
+      padding: 8px;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 28px;
+      width: 28px;
+      background: url(../img/icons/phone-brown.svg) center no-repeat;
+      background-size: 100%;
+
+      @include mobile {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &-text {
+      color: $prim;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
 }
