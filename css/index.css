@@ -198,6 +198,8 @@ ul {
 .header {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 200;
   padding: 16px 0;
   background-color: #FFFFFF;
@@ -988,4 +990,51 @@ ul {
   .contacts__form .button {
     width: 100%;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(17, 17, 17, 0.6);
+}
+.modal.active {
+  z-index: 400;
+}
+.modal__content {
+  position: relative;
+  max-width: 90vw;
+  width: 500px;
+  margin: 0 0 32px;
+  padding: 64px 40px 56px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  transition: transform ease-in-out 0.4s;
+  transform: translateY(-1000px);
+  will-change: transform;
+}
+.modal.active .modal__content {
+  transform: translateY(0);
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: url(../img/icons/close.svg) center no-repeat;
+  background-size: 100%;
 }

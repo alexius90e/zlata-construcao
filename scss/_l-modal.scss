@@ -1,0 +1,51 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: $black, $alpha: 0.6);
+
+  &.active {
+    z-index: 400;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 90vw;
+    width: 500px;
+    margin: 0 0 32px;
+    padding: 64px 40px 56px;
+    box-sizing: border-box;
+    background-color: $white;
+    transition: transform ease-in-out 0.4s;
+    transform: translateY(-1000px);
+    will-change: transform;
+  }
+
+  &.active &__content {
+    transform: translateY(0);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: url(../img/icons/close.svg) center no-repeat;
+    background-size: 100%;
+  }
+}
