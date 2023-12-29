@@ -1014,7 +1014,28 @@ ul {
   }
 }
 .contacts__info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #333333;
+}
+.contacts__info-item::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.contacts__info-item_address::before {
+  background-image: url(../img/icons/address.svg);
+}
+.contacts__info-item_phone::before {
+  background-image: url(../img/icons/phone-black.svg);
+}
+.contacts__info-item_mail::before {
+  background-image: url(../img/icons/mail-black.svg);
 }
 .contacts__map {
   height: 440px;
