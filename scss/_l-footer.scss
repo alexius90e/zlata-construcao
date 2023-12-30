@@ -8,6 +8,7 @@
     position: fixed;
     right: 40px;
     bottom: 40px;
+    z-index: 100;
     cursor: pointer;
 
     @include mobile {
@@ -19,6 +20,7 @@
     &::after {
       content: "";
       position: absolute;
+      z-index: -1;
       border: 1px solid $prim;
       left: -5px;
       right: -5px;

@@ -478,6 +478,7 @@ ul {
   position: fixed;
   right: 40px;
   bottom: 40px;
+  z-index: 100;
   cursor: pointer;
 }
 @media (max-width: 576px) {
@@ -489,6 +490,7 @@ ul {
 .footer__phone::before, .footer__phone::after {
   content: "";
   position: absolute;
+  z-index: -1;
   border: 1px solid #9C742D;
   left: -5px;
   right: -5px;
