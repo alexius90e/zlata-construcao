@@ -922,12 +922,13 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
-@media (max-width: 768px) {
-  .portfolio__cards {
-    margin-bottom: 16px;
-  }
+.portfolio__cards_accordion {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height ease-out 0.3s;
+  will-change: max-height;
 }
 .portfolio__cards-image {
   flex: 0 1 calc(50% - 4px);
@@ -949,12 +950,21 @@ ul {
     height: 280px;
   }
 }
+.portfolio__buttons {
+  margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .portfolio__buttons {
+    margin-top: 16px;
+  }
+}
 .portfolio__buttons .button {
   width: 100%;
   padding: 15px 27px;
   color: #9c742d;
   border: 1px solid #9c742d;
   background-color: #FFFFFF;
+  outline-color: rgba(156, 116, 45, 0.25);
 }
 .portfolio__buttons .button:hover {
   color: #FFFFFF;

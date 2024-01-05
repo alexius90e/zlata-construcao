@@ -1,13 +1,15 @@
 .portfolio {
-
   &__cards {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
 
-    @include tablet {
-      margin-bottom: 16px;
+    &_accordion {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height ease-out 0.3s;
+      will-change: max-height;
     }
 
     &-image {
@@ -31,12 +33,19 @@
   }
 
   &__buttons {
+    margin-top: 32px;
+
+    @include tablet {
+      margin-top: 16px;
+    }
+
     & .button {
       width: 100%;
       padding: 15px 27px;
       color: #9c742d;
       border: 1px solid #9c742d;
       background-color: $white;
+      outline-color: rgba($color: $prim, $alpha: 0.25);
 
       &:hover {
         color: $white;
