@@ -1,3 +1,4 @@
+const modalSuccess = document.querySelector(".modal-success");
 const modalForm = document.querySelector(".modal-callback .modal__form");
 const contactsForm = document.querySelector(".contacts__form");
 const forms = [modalForm, contactsForm];
@@ -12,7 +13,10 @@ forms.forEach((form) => {
     const subject = form.get("subject");
     const message = form.get("message");
 
-    console.log( { name, phone, email, subject, message })
+    console.log({ name, phone, email, subject, message });
+
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach((modal) => modal.classList.remove("active"));
 
     event.currentTarget.reset();
 
@@ -20,7 +24,10 @@ forms.forEach((form) => {
       method: "POST",
       data: { name, phone, email, subject, message },
     })
-      .then(() => console.log("success"))
+      .then(() => {
+        modalSuccess.classList.add("active");
+        setTimeout(() => modalSuccess.classList.remove("active"), 3000);
+      })
       .catch(() => console.log("error"));
   });
 });

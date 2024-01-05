@@ -1149,3 +1149,9 @@ ul {
   background: url(../img/icons/close.svg) center no-repeat;
   background-size: 100%;
 }
+.modal.modal-success .modal__title {
+  color: #9C742D;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: none;
+}

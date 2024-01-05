@@ -50,4 +50,12 @@
     background: url(../img/icons/close.svg) center no-repeat;
     background-size: 100%;
   }
+
+  &.modal-success  &__title {
+    color: $prim;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: none;
+  
+  }
 }

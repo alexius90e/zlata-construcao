@@ -1,3 +1,5 @@
+const modals = document.querySelectorAll(".modal");
+
 const modalCallback = document.querySelector(".modal-callback");
 
 const openCallbackButtons = document.querySelectorAll(".open-callback-button");
@@ -8,9 +10,11 @@ openCallbackButtons.forEach((button) => {
   });
 });
 
-modalCallback.addEventListener("click", (event) => {
-  const isOverlay = event.target.classList.contains("modal");
-  const isClose = event.target.classList.contains("modal__close");
+modals.forEach((modal) => {
+  modal.addEventListener("click", (event) => {
+    const isOverlay = event.target.classList.contains("modal");
+    const isClose = event.target.classList.contains("modal__close");
 
-  if (isOverlay || isClose) event.currentTarget.classList.remove("active");
+    if (isOverlay || isClose) event.currentTarget.classList.remove("active");
+  });
 });
